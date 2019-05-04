@@ -38,12 +38,26 @@ if ( sizeof($request_array['events']) > 0 ) {
                 'replyToken' => $reply_token,
                 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]] // Debug Detail message
             ];
-        }else{
+        }else if("สวัสดีครับ"){
+            $text = "สวัสดีค่ะ คุณไกรพุฒิ มีอะไรให้ช่วยเหลือคะ"
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => $text ]]
+            ];
+        }else if("สอบถามวันลาพักร้อน"){
+            $text = "สิทธิวันลาพักร้อนคงเหลือ 4 วันค่ะ"
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => $text ]]
+            ];
+        }else if("ค่ารักษาพยาบาล"){
+            $text = "ค่ารักษาพยาบาลคุณไกรพุฒิ มีดังนี้ค่ะ<br>- ค่ารักษาพยาบาลผู้ป่วยนอก (OPD) 25,000/ปี<br>- ค่ารักษาพยาบาลผู้ป่วยใน และค่าอาหาร (IPD) 3,000/วัน"
             $data = [
                 'replyToken' => $reply_token,
                 'messages' => [['type' => 'text', 'text' => $text ]]
             ];
         }
+
         
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
