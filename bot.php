@@ -57,6 +57,14 @@ if ( sizeof($request_array['events']) > 0 ) {
                 'messages' => [['type' => 'text', 'text' => $text ]]
             ];
         }
+        // else if("ขอเอกสารสมัครกองทุนสำรองเลี้ยงชีพ"){
+        //     $text = "ค่ารักษาพยาบาลคุณไกรพุฒิ มีดังนี้ค่ะ<br>- ค่ารักษาพยาบาลผู้ป่วยนอก (OPD) 25,000/ปี<br>- ค่ารักษาพยาบาลผู้ป่วยใน และค่าอาหาร (IPD) 3,000/วัน"
+        //     $data = [
+        //         'replyToken' => $reply_token,
+        //         'messages' => [['type' => 'text', 'text' => $text ]]
+        //     ];
+        // }
+
 
         
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
